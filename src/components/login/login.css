@@ -1,0 +1,119 @@
+body{
+    background-color: black;
+    font-family: 'Poppins','Roboto', sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.container{
+    display: inline-block;
+}
+
+
+.container-side-content{
+    background-color: #FE8F8F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+
+.container-side-content img{
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 49%;
+    top: 20%;
+    left: 21%;
+}
+
+
+.container-user-content{
+    background-color:antiquewhite;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;  
+}
+
+
+.container-user-content form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-user-content h2{
+    padding-top: 15%;
+    text-align: center;
+    font-size: 48px;
+    color: #FF5C58;
+}
+
+
+.container-user-content .username{
+    padding-top: 5%;
+    padding-left: 25%;
+    font-size: 24px;
+    color: #FF5C58;
+}
+
+
+.container-user-content .password{
+    padding-top: 5%;
+    padding-left: 26%;
+    font-size: 24px;
+    color: #FF5C58;
+}
+
+
+.container-user-content .login-btn{
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: 40%;
+    color: #FF5C58;
+}
+
+
+.container-user-content .login-btn button{
+    background-color: #FF5C58; 
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 10px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+
+.container-user-content .login-btn button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: #FF5C58;
+    font-style: bold;
+
+}
+
+
+.container-user-content .forget{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 7%;
+    right: 10%;
+}
+
+
+.container-user-content .forget a{
+    text-decoration: none;
+    align-items: center;
+    padding: 5%;
+    color: #FF5C58;
+}

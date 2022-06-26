@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body{
+
+    /* padding: 0%;
+    margin: 0%; */
+}
+
+
+.container_1{
+    /* position: relative;
+    text-align: center; */
+    color: #FF5C58;
+    background-color: #FFEFBC;
+    width: fit-content;
+}
+
+.background img{
+    /* height: 100%;
+    width: 100%; */
+    /* display: block;
+    max-height: fit-content;
+    max-width: fit-content;
+    background-size: cover;
+    background-position: center; */
+    /* height: 100vh; */
+    width: 100%;
+    z-index: -10;
+    opacity: 0.9;
+}
+
+
+.text{
+    position: absolute;
+    bottom: 41%;
+    left: 32%;
+    font-size: 75px;
+}
+
+.user_info{
+    /* margin-right: 20px; */
+}
+
+.user_info form{
+    max-width: 45%;
+    max-height: 80%;
+    /* position: absolute;
+    right: 4%;
+    top: 5%; */
+}
+
+.user_info .heading{
+    /* padding: 2%; */
+    font-size: 24px;
+    font-weight: '15px';
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.user_info form label{
+    font-weight: 700;
+    text-align: left;
+    /* position: absolute;
+    left:0; */
+}
+
+.user_info form input[type=text], select , [type=password],[type=tel],[type=date]{
+    width: 100%;
+    font-size: 16px;
+    /* padding: 8px 10px; */
+    margin: 7px 0;
+    /* padding: 5%; */
+    display: inline-block;
+    border: none;
+    border-bottom: 3px solid #FE8F8F;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+}
+
+.user_info form .row-eight{
+    /* padding: 10%; */
+}
+
+
+.user_info form .row-eight button{
+    
+    background-color: #FF5C58;
+    color:white;
+    outline: none;
+    cursor: pointer;
+    /* padding: 10px 50px; */
+    border: none;
+    border-radius: 7px;
+    transition: 0.2s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.user_info form .row-eight button:hover{
+    background-color: #FFEFBC;
+    color: #FF5C58;
+}
