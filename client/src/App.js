@@ -2,11 +2,14 @@ import react from "react";
 import Login from './components/login/login';
 import Register from './components/register/register';
 import SignUp from './components/register/meDico_register/SignUp';
-import Navbar from '../src/components/Navbar/Navbar';
+import NavbarComp from './components/Navbar/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <NavbarComp />
       {/* <Login /> */}
       {/* <Register /> */}
       {/* <SignUp /> */}
