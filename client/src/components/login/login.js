@@ -1,6 +1,6 @@
 import React from 'react'
 import LoginImg from '../../assets/Login-image.png';
-import './login.css';
+import styles from './login.css';
 
 const Login = () => {
   return(
@@ -10,23 +10,25 @@ const Login = () => {
             <img src={LoginImg} />
         </div>
         <div className="container-user-content">
-            <div className="user-content">
-                <form action="/do-something">
-                    <h2>Login</h2>
+            <div className="user-content font">
+                <form>
+                    <h3 className="">Login</h3>
                     <div className="username">
-                        <label htmlFor="username">Username : </label>
+                        <label className="usertext "><b>Username</b></label>
                         <input type="text" placeholder="Enter your username" />
                     </div>
                     <div className="password">
-                        <label htmlFor="password">Password : </label>
+                        <label className="usertext "><b>Password</b></label>
                         <input type="password" placeholder="Enter your password" />
                     </div>
                     <div className="login-btn">
                         <button>LOGIN</button>
                     </div>
-                    <div className="forget">
-                        <a href="#">FORGET USERNAME?</a>
-                        <a href="#">FORGOT PASSWORD?</a>
+                    <div className="issue">
+                        <span>
+                            Don't have an account?   
+                            <button className="issue-btn "><b>Sign Up</b></button>
+                        </span>
                     </div>
                 </form>
             </div>
