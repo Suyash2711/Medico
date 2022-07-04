@@ -1,35 +1,37 @@
-.landingImg{
-    height: 80%;
-    padding-left: 15%;
+.landingImg {
+  height: 80%;
+  padding-left: 15%;
+  padding-top: 10%;
 }
 
-.side-content{
-    padding-right: 15%;
-    font-size: 20px;
+.side-content {
+  padding-right: 15%;
+  padding-top: 10%;
+  font-size: 20px;
 }
 
-.catchy{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 48px;  
+.catchy {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 48px;
 }
 
-.Lorem{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
+.Lorem {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
 }
 
-.explore-btn{
-    position: absolute;
-    background: #FF5C58;
-    border-radius: 7px;
-    border: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: #FFFFFF;
+.explore-btn {
+  position: absolute;
+  background: #ff5c58;
+  border-radius: 7px;
+  border: none;
+  padding: 8px 15px;
+  font-size: 20px;
+  color: #ffffff;
 }
