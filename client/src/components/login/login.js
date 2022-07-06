@@ -8,7 +8,7 @@ const Login = () => {
     <>
       <div className="container">
         <div className="container-side-content">
-          <img src={LoginImg} />
+          {/* <img src={LoginImg} /> */}
         </div>
         <div className="container-user-content">
           <div className="user-content font">
