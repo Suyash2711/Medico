@@ -1,151 +1,145 @@
-body{
-    background-color: black;
-    font-family: 'Poppins','Roboto', sans-serif;
-    margin: 0%;
-    padding: 0%;
+body {
+  background-color: black;
+  font-family: "Poppins", "Roboto", sans-serif;
+  margin: 0%;
+  padding: 0%;
 }
 
-.font{
-    font-family:"Poppins";
+.font {
+  font-family: "Poppins";
 }
 
-
-.container{
-    display: inline-block;
+.blob2 {
+  position: absolute;
+  transform: rotate(-20deg);
+  z-index: 100;
 }
 
-
-.container-side-content{
-    background-color: #FE8F8F;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    align-items: center;
+.container {
+  display: inline-block;
 }
 
-
-.container-side-content img{
-    justify-content: center;
-    position: relative;
-    width: 50%;
-    height: 49%;
-    top: 20%;
-    left: 21%;
+.container-side-content {
+  background-color: #fe8f8f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  align-items: center;
 }
 
-
-.container-user-content{
-    background-color:white;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;  
+.container-side-content img {
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 49%;
+  top: 20%;
+  left: 21%;
 }
 
-
-.container-user-content{
-    padding-left: 80px;
-    padding-top: 20px;
+.container-user-content {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
 }
 
-
-.container-user-content h3{
-    padding-top: 10%;
-    font-size: 48px;
-    font-weight: 400;
-    color: #FF5C58;
+.container-user-content {
+  padding-left: 80px;
+  padding-top: 20px;
 }
 
-.usertext{
-    font-size: 20px;
+.container-user-content h3 {
+  padding-top: 10%;
+  font-size: 48px;
+  font-weight: 400;
+  color: #ff5c58;
 }
 
-.user-content{
-    padding-left: 0;
+.usertext {
+  font-size: 20px;
 }
 
-.container-user-content .username{
-    padding-top: 20px;
-    font-size: 20px;
-    color: #FF5C58;
+.user-content {
+  padding-left: 0;
 }
 
-
-.container-user-content .password{
-    font-size: 20px;
-    color: #FF5C58;
+.container-user-content .username {
+  padding-top: 20px;
+  font-size: 20px;
+  color: #ff5c58;
 }
 
-
-.container-user-content .login-btn{
-    justify-content: center;
-    padding-top: 3%;
-    color: #FF5C58;
+.container-user-content .password {
+  font-size: 20px;
+  color: #ff5c58;
 }
 
-input[type=text], input[type=password] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 10px 0;
-    display: block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 400px;
-  }
-
-input[type="text"], input[type=password]::placeholder {
-    text-align: left;
-    font-size: 15px;
-    direction: rtl;
-}
-  
-
-.container-user-content .login-btn button{
-    background-color: #FF5C58; 
-    border: none;
-    border-radius: 7px;
-    color: white;
-    padding: 10px 170px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    transition: 0.2s;
+.container-user-content .login-btn {
+  justify-content: center;
+  padding-top: 3%;
+  color: #ff5c58;
 }
 
-
-.container-user-content .login-btn button:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: white;
-    color: #FF5C58;
-    font-style: bold;
-
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 400px;
 }
 
-
-.container-user-content .forget{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    bottom: 7%;
-    right: 10%;
+input[type="text"],
+input[type="password"]::placeholder {
+  text-align: left;
+  font-size: 15px;
+  direction: rtl;
 }
 
-
-.container-user-content .forget a{
-    text-decoration: none;
-    align-items: center;
-    padding: 5%;
-    color: #FF5C58;
+.container-user-content .login-btn button {
+  background-color: #ff5c58;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 10px 170px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition: 0.2s;
 }
 
+.container-user-content .login-btn button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  color: #ff5c58;
+  font-style: bold;
+}
 
-.issue-btn{
-    padding-top: 10px;
-    padding-left: 10px;
-    border: none;
-    background: none;
-    color: #FF5C58;
+.container-user-content .forget {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 7%;
+  right: 10%;
+}
+
+.container-user-content .forget a {
+  text-decoration: none;
+  align-items: center;
+  padding: 5%;
+  color: #ff5c58;
+}
+
+.issue-btn {
+  padding-top: 10px;
+  padding-left: 10px;
+  border: none;
+  background: none;
+  color: #ff5c58;
 }

@@ -2,11 +2,16 @@ import React from "react";
 import LoginImg from "../../assets/Login-image.png";
 import styles from "./login.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import blob1 from "../../assets/blob1.png";
+import blob2 from "../../assets/blob2.png";
+import blob3 from "../../assets/blob3.png";
 
 const Login = () => {
   return (
     <>
       <div className="container">
+        <img className="blob2" src={blob2} />
+
         <div className="container-side-content">
           <img src={LoginImg} />
         </div>
