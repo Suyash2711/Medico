@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarComp from "../Navbar/Nav";
+import NavbarComp from "../navbar/Nav";
 import image from "../../assets/landingPage.svg";
 import "./landing.css";
 import blob1 from "../../assets/blob1.png";

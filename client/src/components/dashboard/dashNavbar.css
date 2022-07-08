@@ -1,0 +1,27 @@
+* {
+  padding: 0%;
+}
+
+.btn {
+  font-family: poppins;
+  color: white;
+  background-color: #ff5c58;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 120px;
+}
+
+.navbar {
+  padding: 10px 2px;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: red;
+}
+
+.navbar-brand {
+  border: none;
+  background-color: none;
+}
