@@ -13,20 +13,20 @@ import DashNavbar from "./components/dashboard/dashNavbar";
 
 function App() {
   return (
-    // <Router>
-    //   <div className="App">
-    //     {/* <NavbarComp /> */}
-    //     <Routes>
-    //       <Route exact path="/" element={<Landing />} />
-    //       <Route exact path="/login" element={<Login />} />
-    //       <Route exact path="/register" element={<Register />} />
-    //       <Route exact path="/explore" element={<Explore />} />
-    //       <Route exact path="/signup" element={<Register_2 />} />
-    //     </Routes>
-    //   </div>
-    // </Router>
+    <Router>
+      <div className="App">
+        {/* <NavbarComp /> */}
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/explore" element={<Explore />} />
+          <Route exact path="/signup" element={<Register_2 />} />
+        </Routes>
+      </div>
+    </Router>
     // <NavbarComp />
-    <Patient />
+    // <Patient />
   );
 }
 
