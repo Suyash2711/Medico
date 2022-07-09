@@ -3,6 +3,10 @@
   overflow-x: hidden;
 }
 
+.landing .row {
+  position: relative;
+}
+
 .landingImg {
   height: 80%;
   padding-left: 15%;
@@ -16,27 +20,27 @@
 }
 
 .blob1 {
-  position: fixed;
-  width: 300px;
-  height: 400px;
-  left: -45px;
-  top: -60px;
+  position: absolute;
+  width: 20%;
+  /* height: 400px; */
+  left: -5%;
+  top: -15%;
   transform: rotate(-20deg);
 }
 .blob2 {
-  position: fixed;
-  width: 300px;
-  height: 400px;
-  right: -70px;
-  top: 160px;
+  position: absolute;
+  width: 20%;
+  /* height: 400px; */
+  right: -5%;
+  bottom: 10%;
   transform: rotate(-20deg);
 }
 .blob3 {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  left: -45px;
-  bottom: -60px;
+  position: absolute;
+  width: 20%;
+  /* height: 300px; */
+  left: -4%;
+  bottom: -10%;
   transform: rotate(-20deg);
 }
 
@@ -66,92 +70,87 @@
   color: #ffffff;
 }
 
-.our_services{
+.our_services {
   display: grid;
   grid-template-rows: 20% 40% 40%;
   grid-gap: 0%;
- 
 }
 
-.service_heading{
+.service_heading {
   text-align: center;
-  
 }
 
-.service_box{
+.service_box {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 17px ;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 17px;
   padding: 0 5%;
   padding-bottom: 10%;
 }
 
-
-.item1{
+.item1 {
   background-color: #ff5c58;
   height: 100px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.item1 h5{
+.item1 h5 {
   text-align: center;
   color: white;
 }
 
-.item2{
-  background-color: #FCD2D1;
+.item2 {
+  background-color: #fcd2d1;
   height: 100px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.item2 h5{
+.item2 h5 {
   text-align: center;
   color: white;
 }
 
-.item3{
+.item3 {
   background-color: #ff5c58;
   height: 100px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.item3 h5{
+.item3 h5 {
   text-align: center;
   color: white;
 }
 
-.item4{
-  background-color: #FCD2D1;
+.item4 {
+  background-color: #fcd2d1;
   height: 100px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.item4 h5{
+.item4 h5 {
   text-align: center;
   color: white;
 }
 
-.item5{
+.item5 {
   background-color: #ff5c58;
   height: 100px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.item5 h5{
+.item5 h5 {
   text-align: center;
   color: white;
 }
 
-.item6{
-  background-color: #FCD2D1;
+.item6 {
+  background-color: #fcd2d1;
   height: 100px;
   border-radius: 15px;
-   
 }
 
-.item6 h5{
+.item6 h5 {
   text-align: center;
   color: white;
   text-align: center;
 }
-
