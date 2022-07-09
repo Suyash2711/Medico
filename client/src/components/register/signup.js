@@ -1,7 +1,59 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Signup = () => {
+const Signup = ({ history }) => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const registerHandler = async (e) => {
+    e.preventDefault();
+
+    const config = {
+      header: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    if (password !== confirmpassword) {
+      setPassword("");
+      setConfirmPassword("");
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+      return setError("Passwords do not match");
+    }
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        {
+          name: username,
+          email,
+          password,
+        },
+        config
+      );
+
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("userId", data.id);
+
+      navigate("/dashboard");
+      //   history.push(`/dashboard`);
+    } catch (error) {
+      setError(error);
+      //   console.log(error);
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    }
+  };
+
   return (
     <div className="container">
       <div className="container-side-content">
@@ -65,28 +117,55 @@ const Signup = () => {
       </div>
       <div className="container-user-content">
         <div className="user-content font">
-          <form>
+          <form onSubmit={registerHandler}>
             <h3 className="">Sign Up</h3>
+            <h4>{error}</h4>
             <div className="username">
               <label className="usertext ">
                 <b>Full Name</b>
               </label>
-              <input type="text" placeholder="Enter your full name" />
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className="username">
               <label className="usertext ">
                 <b>Email Address</b>
               </label>
-              <input type="text" placeholder="Enter your email address" />
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className="password">
               <label className="usertext ">
                 <b>Password</b>
               </label>
-              <input type="password" placeholder="Enter your password" />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="password">
+              <label className="usertext ">
+                <b>Confirm Password</b>
+              </label>
+              <input
+                type="password"
+                placeholder="Confirm your password"
+                value={confirmpassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
             </div>
             <div className="login-btn">
-              <button>Sign Up</button>
+              <button type="submit">Sign Up</button>
             </div>
             <div className="issue">
               <span>

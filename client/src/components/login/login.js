@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LoginImg from "../../assets/Login-image.png";
 import "./login.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import axios from "axios";
 
-const Login = () => {
+const Login = ({ history }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  useEffect(() => {
+    if (localStorage.getItem("authToken")) {
+      history.push(`/dashboard`);
+    }
+  }, [history]);
+
+  const loginHandler = async (e) => {
+    e.preventDefault();
+
+    const config = {
+      header: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        { email, password },
+        config
+      );
+
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("userId", data.id);
+      window.location.href = `/dashboard`;
+    } catch (error) {
+      setError(error.response.data.error);
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    }
+  };
   return (
     <>
       <div className="container">
@@ -68,19 +104,29 @@ const Login = () => {
         </div>
         <div className="container-user-content">
           <div className="user-content font">
-            <form>
+            <form onSubmit={loginHandler}>
               <h3 className="">Login</h3>
               <div className="username">
                 <label className="usertext ">
-                  <b>Username</b>
+                  <b>Email Id</b>
                 </label>
-                <input type="text" placeholder="Enter your username" />
+                <input
+                  type="text"
+                  placeholder="Enter your Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
               </div>
               <div className="password">
                 <label className="usertext ">
                   <b>Password</b>
                 </label>
-                <input type="password" placeholder="Enter your password" />
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                />
               </div>
               <div className="login-btn">
                 <button>LOGIN</button>
@@ -89,7 +135,7 @@ const Login = () => {
                 <span>
                   Don't have an account?
                   <Link to="/signup">
-                    <button className="issue-btn ">
+                    <button className="issue-btn " type="submit">
                       <b>Sign Up</b>
                     </button>
                   </Link>
