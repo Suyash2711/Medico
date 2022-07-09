@@ -76,16 +76,20 @@
   grid-gap: 0%;
 }
 
-.service_heading {
+.service_heading b {
+  font-size: 30px;
+}
+
+h4 {
   text-align: center;
 }
 
 .service_box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 17px;
+  grid-gap: 15px;
   padding: 0 5%;
-  padding-bottom: 10%;
+  /* padding-bottom: 10%; */
 }
 
 .item1 {

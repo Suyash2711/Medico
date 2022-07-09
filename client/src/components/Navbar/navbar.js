@@ -1,11 +1,16 @@
 import React from "react";
+import styles from "./navbar.module.css";
 
 const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          MeDICO
+        <a
+          class="navbar-brand"
+          href="/home"
+          style={{ color: "red", fontWeight: "bold", fontSize: "25px" }}
+        >
+          MéDICO
         </a>
         <button
           class="navbar-toggler"
@@ -19,20 +24,20 @@ const Navbar = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
+          <ul class={`navbar-nav ms-auto ${styles.sidebtn}`}>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">
-                Home
+                OUR SERVICES
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Features
+              <a class="nav-link" href="/signup">
+                REGISTER
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/login">
-                Pricing
+                LOGIN
               </a>
             </li>
           </ul>

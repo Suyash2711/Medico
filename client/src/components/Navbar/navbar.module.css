@@ -1,0 +1,6 @@
+.sidebtn li a {
+  text-decoration: none;
+  list-style: none;
+  color: red;
+  /* border: solid 5px red; */
+}

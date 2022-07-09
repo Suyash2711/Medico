@@ -29,17 +29,17 @@ const Landing = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h4>
           <br />
-          <Link to="/explore">
-            <button className="explore-btn">EXPLORE</button>
-          </Link>
+          <button className="explore-btn" href="#services">
+            EXPLORE
+          </button>
         </div>
       </div>
-      <div className="our_services_container">
+      <div className="our_services_container" id="services">
         <div className="our_services">
           <div className="service_heading">
-            <h2>
+            <h4>
               <b>OUR SERVICES</b>
-            </h2>
+            </h4>
           </div>
           <div className="service_box">
             <div className="item1">
