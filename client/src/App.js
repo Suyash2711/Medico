@@ -1,7 +1,7 @@
 import react from "react";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
-import SignUp from "./components/register/meDico_register/SignUp";
+// import SignUp from "./components/register/meDico_register/SignUp";
 import NavbarComp from "./components/navbar/Nav";
 import Landing from "./components/landing/Landing";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,6 +10,7 @@ import Explore from "./components/navbar/Explore";
 import Register_2 from "./components/register_2/register";
 import Patient from "./components/dashboard/patient";
 import DashNavbar from "./components/dashboard/dashNavbar";
+import Signup from "./components/register/signup";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/explore" element={<Explore />} />
-          <Route exact path="/signup" element={<Register_2 />} />
+          <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/home" element={<Landing />} />
         </Routes>
       </div>

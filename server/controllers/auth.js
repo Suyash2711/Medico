@@ -51,7 +51,5 @@ exports.login = async (req, res, next) => {
 
 const sendToken = (user, statusCode, res) => {
   const token = user.getSignedJwtToken();
-  res
-    .status(statusCode)
-    .json({ sucess: true, token: token, id: user._id, role: user.role });
+  res.status(statusCode).json({ sucess: true, token: token, id: user._id });
 };

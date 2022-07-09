@@ -1,81 +1,108 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { TextField } from './textField';
-import * as Yup from 'yup';
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-    const validate = Yup.object({
-        firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-        lastName: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
-        email: Yup.string().email(15, 'Email is invalid').required('Email is required'),
-        password: Yup.string().min(6, 'Password must be atleast 6 characters').required('Password is required'),
-        confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password must match').required('Confirm password is required')
-    })
   return (
-    <Formik
-        initialValues={{
-            firstname: '',
-            lastname: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        }}
-        // validationSchema={validate}
-        onSubmit={values =>{
-            console.log(values);
-        }}
-    >
-        {formik => (
-            <div>
-                <h1 className="my-4 font-weight-bold-diplay-4">Sign Up</h1>
-                <Form>
-                    <TextField label="First Name" name="firstName" type="text" />
-                    <TextField label="Last Name" name="lasttName" type="text" />
-                    <TextField label="Email" name="email" type="email" />
-                    <TextField label="Password" name="password" type="password" />
-                    <TextField label="Confirm Password" name="confirmPassword" type="password" />
-                    <button className="btn btn-dark mt-3" type="submit">Register</button>
-                    <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
-                </Form>
+    <div className="container">
+      <div className="container-side-content">
+        {/* <img src={LoginImg} /> */}
+        <div className="login">
+          <div className="inner">
+            <div
+              id="carouselExampleIndicators"
+              className="carousel slide"
+              data-bs-ride="carousel"
+              data-interval="100"
+            >
+              <div className="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  className="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/201909/boy-330582_960_720-x640.jpg?LmD0LKbk6ek.kT8UFhoKiDkpTFtjPQBZ"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src="http://www.themetrognome.in/wp-content/uploads/2015/03/Lost-children-of-India.jpg"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src="https://mc.webpcache.epapr.in/pro.php?size=large&in=https://mcmscache.epapr.in/post_images/website_326/post_26593969/full.jpg"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
             </div>
-        )}
-    </Formik>
-  //   <Formik
-  //   initialValues={{
-  //     firstName: '',
-  //     lastName: '',
-  //     email: '',
-  //   }}
+          </div>
+        </div>
+      </div>
+      <div className="container-user-content">
+        <div className="user-content font">
+          <form>
+            <h3 className="">Sign Up</h3>
+            <div className="username">
+              <label className="usertext ">
+                <b>Full Name</b>
+              </label>
+              <input type="text" placeholder="Enter your full name" />
+            </div>
+            <div className="username">
+              <label className="usertext ">
+                <b>Email Address</b>
+              </label>
+              <input type="text" placeholder="Enter your email address" />
+            </div>
+            <div className="password">
+              <label className="usertext ">
+                <b>Password</b>
+              </label>
+              <input type="password" placeholder="Enter your password" />
+            </div>
+            <div className="login-btn">
+              <button>Sign Up</button>
+            </div>
+            <div className="issue">
+              <span>
+                Already have an account?
+                <Link to="/login">
+                  <button className="issue-btn ">
+                    <b>Log In</b>
+                  </button>
+                </Link>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  //   validationSchema={validate}
-  //   onSubmit={async (values) => {
-  //   //   await sleep(500);
-  //   console.log(values);
-  //   //   alert(JSON.stringify(values, null, 2));
-  //   }}
-  // >
-  //   {({ isSubmitting }) => (
-  //     <Form>
-  //       <label htmlFor="firstName">First Name</label>
-  //       <Field name="firstName" placeholder="Jane" />
-  //       <ErrorMessage name="firstName" />
-
-  //       <label htmlFor="lastName">Last Name</label>
-  //       <Field name="lastName" placeholder="Doe" />
-
-  //       <label htmlFor="email">Email</label>
-  //       <Field name="email" placeholder="jane@acme.com" type="email" />
-
-        
-
-  //       <button type="submit" disabled={isSubmitting}>
-  //         Submit
-  //       </button>
-  //     </Form>
-  //   )}
-  // </Formik>
-  )
-}
-
-export default Signup
+export default Signup;
