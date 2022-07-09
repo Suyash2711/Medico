@@ -1,0 +1,189 @@
+.doctorDashboard{
+    padding: 0%;
+    margin: 0%;
+}
+
+.container{
+    color: black;
+    display: grid;
+    grid-template-columns: 50% auto;
+    padding: 0 10%;
+    grid-gap: 5%;
+    padding-top: 5%;
+}
+
+.doctorInfo_column{
+    display: grid;
+    grid-template-rows: repeat(2,2fr 1fr);
+    row-gap: 5%;
+    
+}
+
+.doctor_salutation{
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.doctor_content{
+    grid-column: 1;
+}
+
+.doctor_content h3 b{
+    font-size: 2rem;
+}
+
+.doctor_content h3{
+    font-size: 1.9rem;
+    padding-top: 3%;
+    padding-left: 10%;
+}
+
+.doctor_content h4{
+    font-size: 1.5rem;
+    padding-left: 10%;
+    padding-top:4%;
+}
+
+.doctor_content h5{
+    font-size: 1.2rem;
+    padding-left: 10%;
+    color: #FF5C58;
+}
+
+.doctor_photo{
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor_photo svg{
+    stroke: black;
+    stroke-width: 2px;
+    fill: aliceblue;
+}
+
+.upcoming_appointment_bar{
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-row: 2;
+    
+}
+
+.upcoming_appointment_bar h2{
+    text-align: center;
+    padding-top: 3.5%;
+    font-size: 2rem;
+}
+
+.appointment_date{
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-row: 3/4;
+    background-color: #FFDDBF;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.appointment_date_content{
+    padding: 5%;
+}
+
+.appointment_date_content h4{
+    padding-left: 4%;
+    font-size: 1.2rem;
+}
+
+.appointment_date_content h3{
+    padding-left: 4%;
+}
+
+.appointment_date_content h3 b{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.appointment_date_content a{
+    text-decoration: none;
+    padding: 5%;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.patientInfo_column{
+    display: grid;
+    grid-template-rows: repeat(1,1fr 2fr 2fr) ;
+    row-gap: 5%;
+    
+}
+
+.patient_bar{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.patient_bar h2{
+    text-align: center;
+    padding-top: 7%;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.patient_info1{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #FF5C58;
+    color: white;
+}
+
+.patient_info1 svg{
+    fill: aliceblue;
+    stroke: black;
+    stroke-width: 3px;
+}
+
+.patient_info1 h3{
+    padding-left: 2%;
+    padding-top: 7%;
+    font-size: 1.5rem;
+}
+
+.patient_info1 h3 b{
+    font-size: 1.5rem;
+}
+
+
+.patient_info2{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #FFDDBF;
+    color: black;
+}
+
+.patient_info2 svg{
+    fill: black;
+    stroke: white;
+    stroke-width: 3px;
+}
+
+.patient_info2 h3{
+    padding-left: 2%;
+    padding-top: 7%;
+    font-size: 1.5rem;
+}
+
+.patient_info2 h3 b{
+    font-size: 1.5rem;
+}
+
+
+

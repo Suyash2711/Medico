@@ -1,12 +1,12 @@
 import React from "react";
-import NavbarComp from "../navbar/Nav";
+import NavbarComp from "../Navbar/Nav";
 import image from "../../assets/landingPage.svg";
 import "./landing.css";
 import blob1 from "../../assets/blob1.png";
 import blob2 from "../../assets/blob2.png";
 import blob3 from "../../assets/blob3.png";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Navbar from "../navbar/navbar";
+import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/Footer";
 
 const Landing = () => {
