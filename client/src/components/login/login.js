@@ -1,6 +1,6 @@
 import React from "react";
 import LoginImg from "../../assets/Login-image.png";
-import styles from "./login.css";
+import "./login.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Login = () => {

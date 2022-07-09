@@ -22,6 +22,7 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/signup" element={<Register_2 />} />
+          <Route exact path="/home" element={<Landing />} />
         </Routes>
       </div>
     </Router>

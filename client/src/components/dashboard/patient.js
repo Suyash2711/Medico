@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./patient.css";
+import "./patient.css";
 import DashNavbar from "./dashNavbar";
 
 const Patient = () => {
